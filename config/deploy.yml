@@ -2,12 +2,12 @@
 service: server
 
 # Name of the container image.
-image: your-user/server
+image: zaibutcooler/sagaing-thu
 
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - ubuntu@18.209.45.57
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -23,7 +23,7 @@ proxy:
 registry:
   # Specify the registry server, if you're not using Docker Hub
   # server: registry.digitalocean.com / ghcr.io / ...
-  username: your-user
+  username: zaibutcooler
 
   # Always use an access token rather than real password when possible.
   password:
@@ -32,7 +32,7 @@ registry:
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
   secret:
-    - RAILS_MASTER_KEY
+    - 850187db3ada751388145342859b0304
   clear:
     # Run the Solid Queue Supervisor inside the web server's Puma process to do jobs.
     # When you start using multiple servers, you should split out job processing to a dedicated machine.
